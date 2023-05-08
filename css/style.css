@@ -1,0 +1,526 @@
+:root {
+  --orangeColor: rgba(248, 147, 0, 1);
+  --redColor: rgba(246, 27, 90, 1);
+  --blackColor: rgba(0, 0, 0, 0.75);
+}
+
+
+*{
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  transition: all .2s linear;
+}
+
+html{
+ overflow-x: hidden;
+}
+
+body{
+ background: #fff;
+ width: 100%;
+}
+
+.se-p1 h2 {
+  color: #d0d2d2;
+    font-size: 75px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+/* header start */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+#hero {
+  text-align: center;
+  color: white;
+  background-color: var(--orangeColor);
+  height: 364px;
+  display: flex;
+  justify-content: space-between;
+}
+#pro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  line-height: 50px;
+}
+#hero::after {
+  content: url(../banner-imaj/icons45.png);
+  position: absolute;
+  right: 380px;
+}
+section div .vector:hover {
+   color: var(--orangeColor);
+}
+
+/* Products start */
+
+.container{
+  margin:0 auto;
+  padding:5rem 7rem;
+}
+
+.container .title{
+  font-size: 1.5rem;
+  color:#000000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+
+
+.container .product{
+ width: 23%;
+ min-width: 320px;
+ padding: 10px 12px;
+ cursor: pointer;
+ margin: 15px 0;
+ transition: 0.1s ease;
+ position: relative;
+}
+.container .products-container {
+ display: flex;
+ justify-content: space-between;
+ padding-top: 20px;
+ flex-wrap: wrap;
+}
+
+.container .product img {
+ width: 100%;
+ border-radius: 16px;
+}
+
+
+.container .products-container .product{
+  padding:3rem 2rem;
+  background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(248, 147, 0, 0.20);
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+.des {
+ display: flex;
+ justify-content: space-between;
+ text-align: start;
+ 
+}
+
+
+.products-container .product .des .heart {
+ font-size: 60px;
+}
+
+.container .products-container .product:hover{
+  outline: .2rem solid rgba(248, 147, 0, 1);
+  outline-offset: 0;
+}
+
+.container .products-container .product img{
+  height: 20rem;
+}
+
+.container .products-container .product:hover img{
+  transform: scale(.9);
+}
+
+.container .products-container .product h3{
+  padding:.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color:#000000;
+}
+
+.container .products-container .product:hover h3{
+  color:rgba(248, 147, 0, 1);
+}
+.container .products-container .product .heart{
+ width: 45px;
+ height: 45px;
+ line-height: 40px;
+ border-radius: 50px;
+ text-align: center;
+ font-size: 20px;
+ background-color: rgba(248, 147, 0, 1);
+ color: white;
+ top: 20px;
+ right: 22px;
+ position: absolute;
+}
+
+.container .products-container .product .price{
+  font-size: 1rem;
+  font-weight: 500;
+  color:#000000;
+}
+
+
+/* products-preview */
+
+.products-preview {
+  position: fixed;
+  top:0; left:0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-preview .preview{
+  display: none;
+  padding:2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin:2rem;
+  width: 500rem;
+  height: 400rem;
+}
+
+.products-preview .preview.active{
+  display: flex;
+}
+
+.jo {
+ display: flex;
+}
+.jo-des button {
+background: none;
+border: none;
+margin-top: 20px;
+color: rgb(246, 27, 90);
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.product-sizes ul {
+ list-style: none;
+ padding: 0;
+ margin-top: 10px;
+}
+
+.product-sizes li {
+ display: inline-block;
+ margin-right: 10px;
+}
+
+.product-sizes label {
+ display: inline-block;
+ border: 1px solid #ccc;
+ padding: 5px 10px;
+ cursor: pointer;
+}
+
+.product-sizes input[type="radio"] {
+ display: none;
+}
+
+
+
+.products-preview .preview img{
+  height: 50rem;
+}
+
+.products-preview .preview .fa-times{
+  position: absolute;
+  top:1rem; right:1.5rem;
+  cursor: pointer;
+  color:rgba(248, 147, 0, 1);
+  font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover{
+  transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+  color:#444;
+  padding:.5rem 0;
+  font-size: 2.5rem;
+}
+
+
+
+.products-preview .preview p{
+  line-height: 1.5;
+  padding:1rem 0;
+  font-size: 1.6rem;
+  color:#777;
+}
+
+
+
+
+
+/* see more start */
+#see {
+  text-align: center;
+  
+  
+}
+.seeLink {
+  color: rgba(246, 27, 90, 1);
+  text-decoration: none;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* single product */
+
+
+
+.product-sizes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-sizes li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.product-sizes label {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.product-sizes input[type="radio"] {
+  display: none;
+}
+
+.product-sizes input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* star login */
+
+#form-box {
+  width: 700px;
+  margin: 20px auto;
+  padding: 50px 0;
+}
+#form-box h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  
+}
+#form-box span {
+  color: rgba(112, 123, 129, 1);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+#form-box h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(33, 33, 33, 1);
+  margin-top: 38px;
+
+}
+.input-box {
+  margin: 31px auto;
+  border-bottom: 1px solid var(--orangeColor);
+  padding-top: 10px;
+  padding-bottom: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.input-box input {
+  border: none;
+
+
+  position: relative;
+    right: 281px;
+    top: 44px;
+    padding: 6px;
+    border: none;
+}
+/* Start Login */
+.input-box .Em {
+  position: relative;
+    right: 520px;
+}
+.input-box .Em:hover {
+  border:none;
+}
+.Remember {
+  display: flex;
+}
+.Remember img {
+  margin-right: 10px;
+}
+.Remember h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(33, 33, 33, 1);
+}
+.login-btn {
+  width: 100px;
+  height: 35px;
+  margin: 70px auto 20px;
+  outline: none;
+  border: none;
+  color: white ;
+  font-weight: 500;
+  font-size: 25px;
+  display: block;
+  cursor: pointer;
+  background-color:rgba(246, 27, 90, 1);
+  border-radius: 9px;
+}
+.login-btn:hover {
+  color:rgba(246, 27, 90, 1);
+  background-color: white;
+  border: 2px solid rgba(246, 27, 90, 1);
+  transition: 0.7s;
+}
+/* End Login */
+section .seeLink:hover {
+    color: #000;
+}
+
+.products-preview{
+  position: fixed;
+  top:0; left:0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-preview .preview{
+  display: none;
+  padding:2rem;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin:2rem;
+  width: 500rem;
+  height: 400rem;
+}
+
+.products-preview .preview.active{
+  display: flex;
+}
+
+.jo {
+ display: flex;
+}
+.jo-des button {
+background: none;
+border: none;
+margin-top: 20px;
+color: rgb(246, 27, 90);
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.product-sizes ul {
+ list-style: none;
+ padding: 0;
+ margin-top: 10px;
+}
+
+.product-sizes li {
+ display: inline-block;
+ margin-right: 10px;
+}
+
+.product-sizes label {
+ display: inline-block;
+ border: 1px solid #ccc;
+ padding: 5px 10px;
+ cursor: pointer;
+}
+
+.product-sizes input[type="radio"] {
+ display: none;
+}
+
+
+
+.products-preview .preview img{
+  height: 50rem;
+}
+
+.products-preview .preview .fa-times{
+  position: absolute;
+  top:1rem; right:1.5rem;
+  cursor: pointer;
+  color:rgba(248, 147, 0, 1);
+  font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover{
+  transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+  color:#444;
+  padding:.5rem 0;
+  font-size: 2.5rem;
+}
+
+
+
+.products-preview .preview p{
+  line-height: 1.5;
+  padding:1rem 0;
+  font-size: 1.6rem;
+  color:#777;
+}
+
+
+
+
+
+
+@media (max-width:991px){
+
+  html{
+     font-size: 55%;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .products-preview .preview img{
+     height: 25rem;
+  }
+
+}
+
+@media (max-width:450px){
+
+  html{
+     font-size: 50%;
+  }
+
+}
+
+
+
